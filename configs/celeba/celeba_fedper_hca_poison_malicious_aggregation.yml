@@ -1,0 +1,27 @@
+general:
+  title: CelebA_FedPer_HCA_POISON_Malicious_Aggregation
+  dataset: celeba
+  intra_communication: FedPer
+  cross_communication: HCA
+  rounds: 15
+  result_folder: results
+  result_sub_folder: celeba
+  seed: 1
+  backbone_layers: minus1
+  
+setup:
+  dataset_fraction: 0.4
+  hca_alpha: 0.4
+  tasks:
+    - task: Multi_Label
+      epochs: 2
+      clients: 
+        - ML_Celeba_C0
+        - ML_Celeba_C1
+        - ML_Celeba_C2
+    - task: Facial_Landmark
+      epochs: 2
+      clients: 
+        - FL_Celeba_C0
+        - FL_Celeba_C1
+        - FL_Celeba_C2

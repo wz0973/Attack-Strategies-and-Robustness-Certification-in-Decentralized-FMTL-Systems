@@ -1,0 +1,27 @@
+general:
+  title: Cifar-10_FedPer_HCA_POISON_Trigger_Injection
+  dataset: cifar10
+  intra_communication: FedPer
+  cross_communication: HCA
+  rounds: 15
+  result_folder: results
+  result_sub_folder: cifar-10
+  seed: 1
+  backbone_layers: minus1
+
+setup:
+  dataset_fraction: 1
+  hca_alpha: 0.4
+  tasks:
+    - task: Animals
+      epochs: 2
+      clients:
+        - AN_Cifar10_C0
+        - AN_Cifar10_C1
+        - AN_Cifar10_C2
+    - task: Objects
+      epochs: 2
+      clients:
+        - OB_Cifar10_C0
+        - OB_Cifar10_C1
+        - OB_Cifar10_C2
