@@ -24,6 +24,8 @@ A subset of clients is attacked in each experiment. I measure (i) the direct deg
 
 ### Results & Artifacts
 **All trained clients, plots, tables, and configs will be available here:**
+https://drive.switch.ch/index.php/s/jEQaobC1Isy03yz
+
 ## Installation
 ### Required Steps
 1) Make sure Conda is installed: [https://anaconda.org/anaconda/conda](https://anaconda.org/anaconda/conda)
